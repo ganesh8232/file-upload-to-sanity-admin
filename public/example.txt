@@ -234,8 +234,8 @@ Jane Austen
 
 Who invented the telephone?
 Thomas Edison
-Alexander Graham Bell ganesh
-Nikola Tesla
+Alexander Graham Bell 
+Nikola Tesla ganesh
 Michael Faraday
 
 Which planet is known as the Red Planet?
@@ -245,7 +245,7 @@ Saturn
 Venus
 
 What is the capital city of Spain?
-Barcelona
 Madrid 
 Seville ganesh
+Valencia
 Valencia
