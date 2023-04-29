@@ -5,15 +5,15 @@ Nikola Tesla
 Michael Faraday
 
 Which planet is known as the Red Planet?
-Jupiter
+Jupiter 
 Mars ganesh
 Saturn
 Venus
 
 What is the capital city of Spain?
 Barcelona
-Madrid ganesh
-Seville
+Madrid 
+Seville 
 Valencia
 
 Which author wrote the Harry Potter book series?
@@ -26,7 +26,7 @@ Who invented the telephone?
 Thomas Edison
 Alexander Graham Bell ganesh
 Nikola Tesla
-Michael Faraday
+hhhhhh
 
 Which planet is known as the Red Planet?
 Jupiter
@@ -37,7 +37,7 @@ Venus
 What is the capital city of Spain?
 Barcelona
 Madrid ganesh
-Seville
+Seville 
 Valencia
 
 Who invented the telephone?

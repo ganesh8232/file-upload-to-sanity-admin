@@ -33,7 +33,7 @@ export default function Questions({ questions, router }) {
             option.hasOwnProperty("answerText") &&
             option.hasOwnProperty("isCorrect")
         ) ||
-        !question.options.some((option) => option.isCorrect)
+        question.options.filter((option) => option.isCorrect).length !== 1
       ) {
         errors.push(`${i + 1}`);
       }
@@ -41,6 +41,7 @@ export default function Questions({ questions, router }) {
 
     return errors.length > 0 ? errors : null;
   };
+
   const error = validateQuestions(questions);
 
   const UploadToSanity = async () => {
