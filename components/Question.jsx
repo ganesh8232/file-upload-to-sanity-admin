@@ -8,19 +8,18 @@ function classNames(...classes) {
 }
 
 export default function Questions({ questions, router }) {
+  console.log(questions);
   const [language, setLanguage] = useState("korean");
   const [submitting, setSubmitting] = useState(false);
+
   const validateQuestions = (questions) => {
     const errors = [];
-
     if (!Array.isArray(questions) || questions.length === 0) {
       errors.push("There must be at least one question");
       return errors;
     }
-
     for (let i = 0; i < questions.length; i++) {
       const question = questions[i];
-
       if (
         !question.hasOwnProperty("question") ||
         !question.hasOwnProperty("content") ||
@@ -64,7 +63,7 @@ export default function Questions({ questions, router }) {
     <div className="mx-auto max-w-full xl py-10 px-4">
       <div className="mx-auto max-w-3xl divide-y-2 divide-gray-200">
         <h2 className="text-center text-3xl mb-1 font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Questions
+          {questions.length} Questions
         </h2>
         <div className="pt-5 flex flex-col gap-4 justify-center items-center text-2xl">
           <div className="flex justify-center items-center">
@@ -75,15 +74,16 @@ export default function Questions({ questions, router }) {
               Re Upload
             </button>
           </div>
-          <div className="flex gap-0.5">
+          <div className="flex gap-1">
             {error ? (
               <>
+                <p className="text-red-600 my-2">Question no.</p>
                 {error.map((errorMsg, index) => (
-                  <p key={index} className="text-red-600 m-2">
-                    {errorMsg}
+                  <p key={index} className="text-red-600 my-2">
+                    {errorMsg},
                   </p>
                 ))}
-                <p className="text-red-600 m-2">invalid</p>
+                <p className="text-red-600 my-2">invalid</p>
               </>
             ) : (
               <p className="text-green-500">All questions are valid</p>
