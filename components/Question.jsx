@@ -51,7 +51,11 @@ export default function Questions({ questions, router }) {
     const details = { questions: questions, language: language };
 
     try {
-      await axios.post(url, details);
+      await axios.post(url, details, {
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_AUTHORIZATION_KEY}`,
+        },
+      });
       router.reload();
     } catch (error) {
       console.log(error);

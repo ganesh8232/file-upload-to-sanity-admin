@@ -34,7 +34,7 @@ const Admin = () => {
           questions.push(currentQuestion);
         }
         currentQuestion = {
-          question: line.trim(),
+          question: line.slice(0, -1).trim(),
           options: [],
           content: "question",
           _key: uuidv4(),
